@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/artinmyhand-sample/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/artinmyhand-sample/static/js/main.24b9e32c.chunk.js",
+    "main.js.map": "/artinmyhand-sample/static/js/main.24b9e32c.chunk.js.map",
+    "runtime-main.js": "/artinmyhand-sample/static/js/runtime-main.072317a9.js",
+    "runtime-main.js.map": "/artinmyhand-sample/static/js/runtime-main.072317a9.js.map",
+    "static/css/2.04182036.chunk.css": "/artinmyhand-sample/static/css/2.04182036.chunk.css",
+    "static/js/2.b866c67d.chunk.js": "/artinmyhand-sample/static/js/2.b866c67d.chunk.js",
+    "static/js/2.b866c67d.chunk.js.map": "/artinmyhand-sample/static/js/2.b866c67d.chunk.js.map",
+    "static/js/3.0825944a.chunk.js": "/artinmyhand-sample/static/js/3.0825944a.chunk.js",
+    "static/js/3.0825944a.chunk.js.map": "/artinmyhand-sample/static/js/3.0825944a.chunk.js.map",
+    "index.html": "/artinmyhand-sample/index.html",
+    "static/css/2.04182036.chunk.css.map": "/artinmyhand-sample/static/css/2.04182036.chunk.css.map",
+    "static/css/main.6dea0f05.chunk.css.map": "/artinmyhand-sample/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.b866c67d.chunk.js.LICENSE.txt": "/artinmyhand-sample/static/js/2.b866c67d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.072317a9.js",
+    "static/css/2.04182036.chunk.css",
+    "static/js/2.b866c67d.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.24b9e32c.chunk.js"
+  ]
+}
