@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Contents from '../components/layout/Contents';
 import Navbar from '../components/common/Navbar';
@@ -8,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
 import 'swiper/components/pagination/pagination.min.css';
 
-const MainSliderBlock = styled.div`
+const TopSliderBlock = styled.div`
   width: 150px;
   height: 150px;
   margin-left: 24px;
@@ -42,6 +43,25 @@ const AllArtist = styled.div`
   span {
     margin-right: 8px;
     font-size: 16px;
+  }
+`;
+
+const MainBlock = styled.div`
+  width: 100%;
+  height: 330px;
+  margin-top: 20px;
+  border-radius: 20px;
+`;
+
+const MainSliderBlock = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
   }
 `;
 
@@ -90,6 +110,18 @@ const ARTIST_DATA = [
   },
 ];
 
+const MAIN_DATA = [
+  {
+    src: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=827&q=80',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1518558997970-4ddc236affcd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=759&q=80',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1464820453369-31d2c0b651af?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+  },
+];
+
 const HomePage = () => {
   return (
     <>
@@ -106,9 +138,11 @@ const HomePage = () => {
         >
           {EXAMPLE_DATA.map((item, index) => (
             <SwiperSlide key={index}>
-              <MainSliderBlock>
-                <img src={item.src} alt={index} />
-              </MainSliderBlock>
+              <Link to="/detail">
+                <TopSliderBlock>
+                  <img src={item.src} alt={index} />
+                </TopSliderBlock>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -123,9 +157,35 @@ const HomePage = () => {
             </AllArtist>
           </TitleBlock>
           {ARTIST_DATA.map((data, index) => (
-            <ArtistComp></ArtistComp>
+            <ArtistComp
+              index={index}
+              src={data.artist_img}
+              name={data.name}
+              artName={data.art_name}
+              score={data.score}
+            ></ArtistComp>
           ))}
         </TopArtistBlock>
+
+        <MainBlock>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={10}
+            freeMode={true}
+            pagination={{
+              clickable: true,
+            }}
+            className="mySwiper"
+          >
+            {MAIN_DATA.map((item, index) => (
+              <SwiperSlide key={index}>
+                <MainSliderBlock>
+                  <img src={item.src} alt={index} />
+                </MainSliderBlock>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </MainBlock>
       </Contents>
     </>
   );

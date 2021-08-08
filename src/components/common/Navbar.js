@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import palette from '../../styles/palette';
 import { IoIosArrowBack } from 'react-icons/io';
 import { BiSearch } from 'react-icons/bi';
@@ -41,7 +42,9 @@ const Navbar = ({ back = true }) => {
           <IoIosArrowBack size={18} style={backStyles} />
         </LeftBlock>
       )}
-      <LogoBlock left={back}>AMH</LogoBlock>
+      <Link to="/">
+        <LogoBlock left={back}>AMH</LogoBlock>
+      </Link>
       <RightBlock>
         <VscListSelection size={24} />
         {!back && <BiSearch size={24} />}
